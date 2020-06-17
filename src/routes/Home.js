@@ -2,7 +2,9 @@ import React from 'react';
 import './Home.css';
 
 
+
 class Home extends React.Component{
+
 
     constructor(props) {
         super(props);
@@ -12,6 +14,7 @@ class Home extends React.Component{
     mySubmitHandler = (event) => {
         event.preventDefault();
 
+        
         this.props.history.push({
             pathname : '/Q_first',
             state : {
@@ -26,6 +29,8 @@ class Home extends React.Component{
     myChangeHandler = (event) => {
         this.setState({username: event.target.value});
     }
+
+    
 
     render(){
         return (

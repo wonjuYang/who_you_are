@@ -1,11 +1,11 @@
 import React from 'react';
 
 
-class Q_first extends React.Component {
+class Q_second extends React.Component {
 
 
     componentDidMount(){
-        console.log(this.props);
+        
         const {location, history } = this.props;
         if(location.state === undefined){
             history.push('/')
@@ -13,13 +13,13 @@ class Q_first extends React.Component {
     }
 
     constructor(props) {
-        
         super(props);
-        this.state = { q_first: '' };
+        this.state = { q_second: '' };
     }
 
     myChangeHandler = (event) => {
-        this.setState({q_first: event.target.value});
+        this.setState({q_second: event.target.value});
+        console.log(this.state);
     }
 
     mySubmitHandler = (event) => {
@@ -27,11 +27,11 @@ class Q_first extends React.Component {
 
         
         this.props.history.push({
-            
-            pathname : '/Q_second',
+            pathname : '/Q_third',
             state : {
-                userName: this.props.location.state.userName,
-                q_first: this.state.q_first,
+                userName :this.props.location.state.userName,
+                q_first: this.props.location.state.q_first,
+                q_second: this.state.q_second,
             }
         });
 
@@ -45,8 +45,8 @@ class Q_first extends React.Component {
         if(location.state){    
             return (
                 <form onSubmit={this.mySubmitHandler}>
-                    <input type="radio" value="universe" checked={this.state.q_first === "universe"}  onChange={this.myChangeHandler} name="study"/> 나는 원주와 대학교 동창이다
-                    <input type="radio" value="highschool" checked={this.state.q_first === "highschool"}  onChange={this.myChangeHandler} name="study"/> 나는 원주와 고등학교 동창이다.
+                    <input type="radio" value="ipad" checked={this.state.q_second === "ipad"}  onChange={this.myChangeHandler} name="gender"/> 나는 아이패드를 가지고 있다.
+                    <input type="radio" value="airpot" checked={this.state.q_second === "airpot"}  onChange={this.myChangeHandler} name="gender"/> 나는 에어팟을 가지고 있다.
                     <input type="submit" value="Submit"  /> 
                 </form>
                 
@@ -59,7 +59,7 @@ class Q_first extends React.Component {
 }
 
 
-export default Q_first
+export default Q_second
 
     
 
