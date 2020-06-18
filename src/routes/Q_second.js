@@ -45,8 +45,8 @@ class Q_second extends React.Component {
         if(location.state){    
             return (
                 <form onSubmit={this.mySubmitHandler}>
-                    <input type="radio" value="ipad" checked={this.state.q_second === "ipad"}  onChange={this.myChangeHandler} name="gender"/> 나는 아이패드를 가지고 있다.
-                    <input type="radio" value="airpot" checked={this.state.q_second === "airpot"}  onChange={this.myChangeHandler} name="gender"/> 나는 에어팟을 가지고 있다.
+                    <input type="radio" value="yescountry" checked={this.state.q_second === "yescountry"}  onChange={this.myChangeHandler} name="country"/> 나는 3개월 이상 해외에 머무른 적이 있다.
+                    <input type="radio" value="nocountry" checked={this.state.q_second === "nocountry"}  onChange={this.myChangeHandler} name="country"/> 나는 3개월 이상 해외에 머무른 적이 없다.
                     <input type="submit" value="Submit"  /> 
                 </form>
                 
