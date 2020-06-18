@@ -28,7 +28,7 @@ class Q_third extends React.Component {
 
         
         this.props.history.push({
-            pathname : '/Q_forth',
+            pathname : '/result',
             state : {
                 userName :this.props.location.state.userName,
                 q_first: this.props.location.state.q_first,
