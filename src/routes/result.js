@@ -2,16 +2,26 @@ import React from 'react';
 
 
 
+
 class result extends React.Component{
 
 
     constructor(props){
+      
         super(props);
+        
+        const {location, history } = this.props;
+        if(location.state === undefined){
+            history.push('/')
+        }
+
+
+
+
         this.f_result = "nodata";
 
         
         const q_result = props.location.state;
-
 
         
         if(q_result.q_first === "highschool" && q_result.q_second ===  "yescountry" && q_result.q_third === "sister"){

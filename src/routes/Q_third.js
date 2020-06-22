@@ -49,9 +49,22 @@ class Q_third extends React.Component {
                 <section>
                     <span>q_third</span>
                     <form onSubmit={this.mySubmitHandler}> 
-                        <input type="radio" value="sister" checked={this.state.q_third === "sister"}  onChange={this.myChangeHandler} name="family"/> 나는 여동생이 있다.
-                        <input type="radio" value="brother" checked={this.state.q_third === "brother"}  onChange={this.myChangeHandler} name="family"/> 나는 남동생이 있다.
-                        <input type="submit" value="Submit"  /> 
+                        <div className="row uniform 50%">
+                            <div className="6u">
+                                <input type="radio" id="priority-normal" value="sister" checked={this.state.q_third === "sister"}  onChange={this.myChangeHandler} name="family" />
+                                <label htmlFor="priority-normal"> 나는 여동생이 있다. </label>
+                            </div>
+                            <div className="6u$">
+                                <input type="radio" id="priority-high" value="brother" checked={this.state.q_third === "brother"}  onChange={this.myChangeHandler} name="family" />
+                                <label htmlFor="priority-high">나는 남동생이 있다.</label>
+                            </div>
+                            {/* 
+                            <input type="radio" value="sister" checked={this.state.q_third === "sister"}  onChange={this.myChangeHandler} name="family"/> 나는 여동생이 있다.
+                            <input type="radio" value="brother" checked={this.state.q_third === "brother"}  onChange={this.myChangeHandler} name="family"/> 나는 남동생이 있다.
+                            */}
+                        
+                            <input type="submit" value="Submit"  /> 
+                        </div>
                     </form>
                 </section>
                 

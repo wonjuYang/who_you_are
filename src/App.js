@@ -6,6 +6,8 @@ import Q_first from './routes/Q_first';
 import Q_second from './routes/Q_second';
 import Q_third from './routes/Q_third';
 import result from './routes/result';
+import './css/main.css';
+
 
 function App() {
   return (  
