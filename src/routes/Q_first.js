@@ -60,9 +60,14 @@ class Q_first extends React.Component {
                         <input type="radio" value="highschool" checked={this.state.q_first === "highschool"}  onChange={this.myChangeHandler} name="study"/> 나는 원주와 고등학교 동창이다.
                         */}
                         
-
-                        <input type="submit" value="Submit"  />
-                    </div> 
+                    </div>
+                    <div className="12u$">
+                        <ul className="actions">
+                            <li>
+                                <input type="submit" value="Submit" className="special" />      
+                            </li>
+                        </ul>
+                    </div>
                 </form>
                 
             );

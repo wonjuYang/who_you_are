@@ -5,6 +5,8 @@ import React from 'react';
 
 class result extends React.Component{
 
+    
+
 
     constructor(props){
       
@@ -12,6 +14,7 @@ class result extends React.Component{
         
         const {location, history } = this.props;
         if(location.state === undefined){
+            document.location.href = '/'
             history.push('/')
         }
 
@@ -23,18 +26,20 @@ class result extends React.Component{
         
         const q_result = props.location.state;
 
+
         
-        if(q_result.q_first === "highschool" && q_result.q_second ===  "yescountry" && q_result.q_third === "sister"){
+
+        if(q_result.q_first === "highschool" && q_result.q_second ===  "yescountry" && q_result.q_third === "with"){
             this.f_result = "연희";
-        }else if(q_result.q_first === "highschool" && q_result.q_second ===  "nocountry" && q_result.q_third === "sister"){
+        }else if(q_result.q_first === "highschool" && q_result.q_second ===  "nocountry" && q_result.q_third === "alone"){
             this.f_result = "한나";
-        }else if(q_result.q_first === "universe" && q_result.q_second ===  "nocountry" && q_result.q_third === "brother"){
+        }else if(q_result.q_first === "universe" && q_result.q_second ===  "nocountry" && q_result.q_third === "alone"){
             this.f_result = "보영";
-        }else if(q_result.q_first === "universe" && q_result.q_second ===  "yescountry" && q_result.q_third === "brother"){
+        }else if(q_result.q_first === "universe" && q_result.q_second ===  "yescountry" && q_result.q_third === "with"){
             this.f_result = "사나";
-        }else if(q_result.q_first === "universe" && q_result.q_second ===  "nocountry" && q_result.q_third === "sister"){
+        }else if(q_result.q_first === "universe" && q_result.q_second ===  "nocountry" && q_result.q_third === "with"){
             this.f_result = "진솔";
-        }else if(q_result.q_first === "universe" && q_result.q_second ===  "yescountry" && q_result.q_third === "brother"){
+        }else if(q_result.q_first === "universe" && q_result.q_second ===  "yescountry" && q_result.q_third === "alone"){
             this.f_result = "소현";
         }else{
             this.f_result="누군데 이거 하고 있는건데"
@@ -44,19 +49,17 @@ class result extends React.Component{
 
     }
 
-    componentDidMount(props){
-        console.log(this.props);
+    componentDidMount(){
+        
         const {location, history } = this.props;
         if(location.state === undefined){
             history.push('/')
         }
 
-        console.log(location.state.f_result)
-        this.f_result = location.state.f_result;
+        
     }
 
-    
-    
+
 
     render(){
         return (

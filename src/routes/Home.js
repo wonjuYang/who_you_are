@@ -38,10 +38,7 @@ class Home extends React.Component{
         return (
             <section className = "container">
                 <header id="header">
-                    <a href="index.html" className="logo"><strong>Binary</strong> by TEMPLATED</a>
-                    <nav>
-                        <a href="#menu">Menu</a>
-                    </nav>
+                    <a href="/" className="logo"><strong>WHO ARE YOU</strong></a>
 			    </header>
                 <form onSubmit={this.mySubmitHandler}>
                     <label>

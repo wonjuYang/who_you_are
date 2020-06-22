@@ -61,7 +61,13 @@ class Q_second extends React.Component {
                         <input type="radio" value="nocountry" checked={this.state.q_second === "nocountry"}  onChange={this.myChangeHandler} name="country"/> 나는 3개월 이상 해외에 머무른 적이 없다.
                         */}
 
-                        <input type="submit" value="Submit"  /> 
+                        <div className="12u$">
+                            <ul className="actions">
+                                <li>
+                                    <input type="submit" value="Submit" className="special" />      
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                 </form>
                 
