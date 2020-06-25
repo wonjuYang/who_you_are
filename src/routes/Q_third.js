@@ -52,8 +52,8 @@ class Q_third extends React.Component {
 			        </header>
                     <form onSubmit={this.mySubmitHandler}>
                         <div className="row 50% uniform">
-                            <div className="6u"><span className="image fit"><img src="/image/pic06.jpg" alt="" /></span></div>
-                            <div className="6u$"><span className="image fit"><img src="/image/pic05.jpg" alt="" /></span></div>
+                            <div className="6u"><span className="image fit"><img src="./image/pic06.jpg" alt="" /></span></div>
+                            <div className="6u$"><span className="image fit"><img src="./image/pic05.jpg" alt="" /></span></div>
                         </div>
                         <div className="row uniform 50%">
                             <div className="6u">
