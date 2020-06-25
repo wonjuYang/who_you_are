@@ -45,36 +45,39 @@ class Q_first extends React.Component {
         const { location } = this.props;
         if(location.state){    
             return (
-                
-                <form onSubmit={this.mySubmitHandler}>
-                    <div className="row 50% uniform">
-                        <div className="6u"><span className="image fit"><img src="/image/pic01.PNG" alt="" /></span></div>
-					    <div className="6u$"><span className="image fit"><img src="./image/pic02.PNG" alt="" /></span></div>
-                    </div>
-                    <div className="row uniform 50%">
-                        <div className="6u">
-                            <input type="radio" id="priority-normal" value="universe" checked={this.state.q_first === "universe"}  onChange={this.myChangeHandler} name="study" />
-                            <label htmlFor="priority-normal">나는 원주와 고등학교 동창이다.</label>
+                <div className='container'>
+                    <header id="header">
+                        <a href="/" className="logo"><strong>WHO ARE YOU</strong></a>
+			        </header>
+                    <form onSubmit={this.mySubmitHandler}>
+                        <div className="row 50% uniform">
+                            <div className="6u"><span className="image fit"><img src="/image/pic01.PNG" alt="" /></span></div>
+                            <div className="6u$"><span className="image fit"><img src="./image/pic02.PNG" alt="" /></span></div>
                         </div>
-                        <div className="6u$">
-                            <input type="radio" id="priority-high" value="highschool" checked={this.state.q_first === "highschool"}  onChange={this.myChangeHandler} name="study" />
-                            <label htmlFor="priority-high">나는 원주와 대학교 동창이다.</label>
+                        <div className="row uniform 50%">
+                            <div className="6u">
+                                <input type="radio" id="priority-normal" value="highschool" checked={this.state.q_first === "highschool"}  onChange={this.myChangeHandler} name="study" />
+                                <label htmlFor="priority-normal">나는 원주와 고등학교 동창이다.</label>
+                            </div>
+                            <div className="6u$">
+                                <input type="radio" id="priority-high" value="universe" checked={this.state.q_first === "universe"}  onChange={this.myChangeHandler} name="study" />
+                                <label htmlFor="priority-high">나는 원주와 대학교 동창이다.</label>
+                            </div>
+                            {/* 
+                            <input type="radio" value="universe" checked={this.state.q_first === "universe"}  onChange={this.myChangeHandler} name="study"/> 나는 원주와 대학교 동창이다.
+                            <input type="radio" value="highschool" checked={this.state.q_first === "highschool"}  onChange={this.myChangeHandler} name="study"/> 나는 원주와 고등학교 동창이다.
+                            */}
+                            
                         </div>
-                        {/* 
-                        <input type="radio" value="universe" checked={this.state.q_first === "universe"}  onChange={this.myChangeHandler} name="study"/> 나는 원주와 대학교 동창이다.
-                        <input type="radio" value="highschool" checked={this.state.q_first === "highschool"}  onChange={this.myChangeHandler} name="study"/> 나는 원주와 고등학교 동창이다.
-                        */}
-                        
-                    </div>
-                    <div className="12u$">
-                        <ul className="actions">
-                            <li>
-                                <input type="submit" value="Submit" className="special" />      
-                            </li>
-                        </ul>
-                    </div>
-                </form>
-            
+                        <div className="12u$">
+                            <ul className="actions">
+                                <li>
+                                    <input type="submit" value="Submit" className="special" />      
+                                </li>
+                            </ul>
+                        </div>
+                    </form>
+                </div>
                 
             );
             

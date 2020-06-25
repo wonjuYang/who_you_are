@@ -46,8 +46,15 @@ class Q_third extends React.Component {
         const { location } = this.props;
         if(location.state){    
             return (
-                <section>
-                    <form onSubmit={this.mySubmitHandler}> 
+                <div className='container'>
+                    <header id="header">
+                        <a href="/" className="logo"><strong>WHO ARE YOU</strong></a>
+			        </header>
+                    <form onSubmit={this.mySubmitHandler}>
+                        <div className="row 50% uniform">
+                            <div className="6u"><span className="image fit"><img src="/image/pic06.jpg" alt="" /></span></div>
+                            <div className="6u$"><span className="image fit"><img src="/image/pic05.jpg" alt="" /></span></div>
+                        </div>
                         <div className="row uniform 50%">
                             <div className="6u">
                                 <input type="radio" id="priority-normal" value="with" checked={this.state.q_third === "with"}  onChange={this.myChangeHandler} name="family" />
@@ -71,7 +78,7 @@ class Q_third extends React.Component {
                             </div>
                         </div>
                     </form>
-                </section>
+                </div>
                 
                 
             );

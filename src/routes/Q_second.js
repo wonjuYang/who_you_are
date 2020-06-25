@@ -45,32 +45,34 @@ class Q_second extends React.Component {
         const { location } = this.props;
         if(location.state){    
             return (
-                <form onSubmit={this.mySubmitHandler}>
-                    
-                    <div className="row uniform 50%">
-                        <div className="6u">
-                            <input type="radio" id="priority-normal" value="yescountry" checked={this.state.q_second === "yescountry"}  onChange={this.myChangeHandler} name="country" />
-                            <label htmlFor="priority-normal">나는 3개월 이상 해외에 머무른 적이 있다.</label>
+                <div className='container'>
+                    <header id="header">
+                        <a href="/" className="logo"><strong>WHO ARE YOU</strong></a>
+			        </header>
+                    <form onSubmit={this.mySubmitHandler}>
+                        <div className="row 50% uniform">
+                            <div className="6u"><span className="image fit"><img src="/image/pic03.jpg" alt="" /></span></div>
+                            <div className="6u$"><span className="image fit"><img src="/image/pic04.jpg" alt="" /></span></div>
                         </div>
-                        <div className="6u$">
-                            <input type="radio" id="priority-high" value="nocountry" checked={this.state.q_second === "nocountry"}  onChange={this.myChangeHandler} name="country" />
-                            <label htmlFor="priority-high">나는 3개월 이상 해외에 머무른 적이 없다.</label>
+                        <div className="row uniform 50%">
+                            <div className="6u">
+                                <input type="radio" id="priority-normal" value="yescountry" checked={this.state.q_second === "yescountry"}  onChange={this.myChangeHandler} name="country" />
+                                <label htmlFor="priority-normal">나는 3개월 이상 해외에 머무른 적이 있다.</label>
+                            </div>
+                            <div className="6u$">
+                                <input type="radio" id="priority-high" value="nocountry" checked={this.state.q_second === "nocountry"}  onChange={this.myChangeHandler} name="country" />
+                                <label htmlFor="priority-high">나는 3개월 이상 해외에 머무른 적이 없다.</label>
+                            </div>
+                            <div className="12u$">
+                                <ul className="actions">
+                                    <li>
+                                        <input type="submit" value="Submit" className="special" />      
+                                    </li>
+                                </ul>
+                            </div>
                         </div>
-                        {/* 
-                        <input type="radio" value="yescountry" checked={this.state.q_second === "yescountry"}  onChange={this.myChangeHandler} name="country"/> 나는 3개월 이상 해외에 머무른 적이 있다.
-                        <input type="radio" value="nocountry" checked={this.state.q_second === "nocountry"}  onChange={this.myChangeHandler} name="country"/> 나는 3개월 이상 해외에 머무른 적이 없다.
-                        */}
-
-                        <div className="12u$">
-                            <ul className="actions">
-                                <li>
-                                    <input type="submit" value="Submit" className="special" />      
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </form>
-                
+                    </form>
+                </div>
             );
             
         }else{
