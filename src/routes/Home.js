@@ -13,10 +13,31 @@ class Home extends React.Component{
         console.log(props)
     }
 
+    isEveryFieldValid = () => {
+        const { isNameValid } = this.state;
+        return isNameValid;
+      }
+
+    renderSubmitBtn = () => {
+        if (this.isEveryFieldValid()) {
+          return (
+            <button type="submit" className="btn btn-primary btn-block">
+              Submit
+            </button>
+          )
+        } 
+      
+        return (
+          <button type="submit" className="btn btn-primary btn-block" disabled>
+            Submit
+          </button>
+        )
+    }
+
     mySubmitHandler = (event) => {
         event.preventDefault();
 
-        
+
         this.props.history.push({
             pathname : '/Q_first',
             state : {
@@ -29,7 +50,15 @@ class Home extends React.Component{
     }
     
     myChangeHandler = (event) => {
+
         this.setState({username: event.target.value});
+        if(event.target.value === undefined || event.target.value === "" || event.target.value === " " || event.target.value === null){
+            this.setState({
+                isNameValid: false})
+        }else{
+            this.setState({
+                isNameValid: true})
+        }
     }
 
     
@@ -45,7 +74,8 @@ class Home extends React.Component{
                         Name:
                         <input type="text" onChange={this.myChangeHandler} name="name" />
                     </label>
-                    <input type="submit" value="Submit"  /> 
+                    {this.renderSubmitBtn()}
+
                 </form>
                 {/*<span>{this.state.username}</span>*/}
             </section>

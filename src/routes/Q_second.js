@@ -1,4 +1,6 @@
 import React from 'react';
+import pic1 from '../image/pic03.jpg'
+import pic2 from '../image/pic04.jpg'
 
 
 class Q_second extends React.Component {
@@ -16,11 +18,39 @@ class Q_second extends React.Component {
         super(props);
         this.state = { q_second: '' };
         console.log(props);
-    }  
+    }
+    
+    isEveryFieldValid = () => {
+        const { isNameValid } = this.state;
+        return isNameValid;
+      }
+
+    renderSubmitBtn = () => {
+        if (this.isEveryFieldValid()) {
+          return (
+            <button type="submit" className="btn btn-primary btn-block">
+              Submit
+            </button>
+          )
+        } 
+      
+        return (
+          <button type="submit" className="btn btn-primary btn-block" disabled>
+            Submit
+          </button>
+        )
+    }
 
     myChangeHandler = (event) => {
         this.setState({q_second: event.target.value});
-        console.log(this.state);
+       
+        if(event.target.value === undefined || event.target.value === "" || event.target.value === " " || event.target.value === null){
+            this.setState({
+                isNameValid: false})
+        }else{
+            this.setState({
+                isNameValid: true})
+        }
     }
 
     mySubmitHandler = (event) => {
@@ -51,8 +81,8 @@ class Q_second extends React.Component {
 			        </header>
                     <form onSubmit={this.mySubmitHandler}>
                         <div className="row 50% uniform">
-                            <div className="6u"><span className="image fit"><img src="./image/pic03.jpg" alt="" /></span></div>
-                            <div className="6u$"><span className="image fit"><img src="./image/pic04.jpg" alt="" /></span></div>
+                            <div className="6u"><span className="image fit"><img src={pic1} alt="" /></span></div>
+                            <div className="6u$"><span className="image fit"><img src={pic2} alt="" /></span></div>
                         </div>
                         <div className="row uniform 50%">
                             <div className="6u">
@@ -66,7 +96,7 @@ class Q_second extends React.Component {
                             <div className="12u$">
                                 <ul className="actions">
                                     <li>
-                                        <input type="submit" value="Submit" className="special" />      
+                                        {this.renderSubmitBtn()}
                                     </li>
                                 </ul>
                             </div>

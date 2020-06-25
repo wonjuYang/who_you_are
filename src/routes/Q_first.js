@@ -1,4 +1,6 @@
 import React from 'react';
+import pic1 from '../image/pic01.PNG'
+import pic2 from '../image/pic02.PNG'
 
 
 
@@ -19,8 +21,38 @@ class Q_first extends React.Component {
         this.state = { q_first: '' };
     }
 
+    isEveryFieldValid = () => {
+        const { isNameValid } = this.state;
+        return isNameValid;
+      }
+
+    renderSubmitBtn = () => {
+        if (this.isEveryFieldValid()) {
+          return (
+            <button type="submit" className="btn btn-primary btn-block">
+              Submit
+            </button>
+          )
+        } 
+      
+        return (
+          <button type="submit" className="btn btn-primary btn-block" disabled>
+            Submit
+          </button>
+        )
+    }
+
+
     myChangeHandler = (event) => {
         this.setState({q_first: event.target.value});
+
+        if(event.target.value === undefined || event.target.value === "" || event.target.value === " " || event.target.value === null){
+            this.setState({
+                isNameValid: false})
+        }else{
+            this.setState({
+                isNameValid: true})
+        }
     }
 
     mySubmitHandler = (event) => {
@@ -51,8 +83,8 @@ class Q_first extends React.Component {
 			        </header>
                     <form onSubmit={this.mySubmitHandler}>
                         <div className="row 50% uniform">
-                            <div className="6u"><span className="image fit"><img src="./image/pic01.PNG" alt="" /></span></div>
-                            <div className="6u$"><span className="image fit"><img src="./image/pic02.PNG" alt="" /></span></div>
+                            <div className="6u"><span className="image fit"><img src={pic1} alt="" /></span></div>
+                            <div className="6u$"><span className="image fit"><img src={pic2} alt="" /></span></div>
                         </div>
                         <div className="row uniform 50%">
                             <div className="6u">
@@ -72,7 +104,7 @@ class Q_first extends React.Component {
                         <div className="12u$">
                             <ul className="actions">
                                 <li>
-                                    <input type="submit" value="Submit" className="special" />      
+                                    {this.renderSubmitBtn()}  
                                 </li>
                             </ul>
                         </div>
