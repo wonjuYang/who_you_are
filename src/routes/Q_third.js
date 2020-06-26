@@ -83,17 +83,17 @@ class Q_third extends React.Component {
 			        </header>
                     <form onSubmit={this.mySubmitHandler}>
                         <div className="row 50% uniform">
-                            <div className="6u"><span className="image fit"><img src={pic1} alt="" /></span></div>
-                            <div className="6u$"><span className="image fit"><img src={pic2} alt="" /></span></div>
+                        <div className="6u"><span className="image fit"><label htmlFor="with"><img src={pic1} alt="" /></label></span></div>
+                            <div className="6u$"><span className="image fit"><label htmlFor="alone"><img src={pic2} alt="" /></label></span></div>
                         </div>
                         <div className="row uniform 50%">
                             <div className="6u">
-                                <input type="radio" id="priority-normal" value="with" checked={this.state.q_third === "with"}  onChange={this.myChangeHandler} name="family" />
-                                <label htmlFor="priority-normal"> 나는 가족(동생)과 함께 산다. </label>
+                                <input type="radio" id="with" value="with" checked={this.state.q_third === "with"}  onChange={this.myChangeHandler} name="family" />
+                                <label htmlFor="with"> 나는 가족(동생)과 함께 산다. </label>
                             </div>
                             <div className="6u$">
-                                <input type="radio" id="priority-high" value="alone" checked={this.state.q_third === "alone"}  onChange={this.myChangeHandler} name="family" />
-                                <label htmlFor="priority-high">나는 가족과 떨어져 산다.</label>
+                                <input type="radio" id="alone" value="alone" checked={this.state.q_third === "alone"}  onChange={this.myChangeHandler} name="family" />
+                                <label htmlFor="alone">나는 가족과 떨어져 산다.</label>
                             </div>
                             {/* 
                             <input type="radio" value="sister" checked={this.state.q_third === "sister"}  onChange={this.myChangeHandler} name="family"/> 나는 여동생이 있다.

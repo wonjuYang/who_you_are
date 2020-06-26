@@ -81,17 +81,17 @@ class Q_second extends React.Component {
 			        </header>
                     <form onSubmit={this.mySubmitHandler}>
                         <div className="row 50% uniform">
-                            <div className="6u"><span className="image fit"><img src={pic1} alt="" /></span></div>
-                            <div className="6u$"><span className="image fit"><img src={pic2} alt="" /></span></div>
+                        <div className="6u"><span className="image fit"><label htmlFor="yescountry"><img src={pic1} alt="" /></label></span></div>
+                            <div className="6u$"><span className="image fit"><label htmlFor="nocountry"><img src={pic2} alt="" /></label></span></div>
                         </div>
                         <div className="row uniform 50%">
                             <div className="6u">
-                                <input type="radio" id="priority-normal" value="yescountry" checked={this.state.q_second === "yescountry"}  onChange={this.myChangeHandler} name="country" />
-                                <label htmlFor="priority-normal">나는 3개월 이상 해외에 머무른 적이 있다.</label>
+                                <input type="radio" id="yescountry" value="yescountry" checked={this.state.q_second === "yescountry"}  onChange={this.myChangeHandler} name="country" />
+                                <label htmlFor="yescountry">나는 3개월 이상 해외에 머무른 적이 있다.</label>
                             </div>
                             <div className="6u$">
-                                <input type="radio" id="priority-high" value="nocountry" checked={this.state.q_second === "nocountry"}  onChange={this.myChangeHandler} name="country" />
-                                <label htmlFor="priority-high">나는 3개월 이상 해외에 머무른 적이 없다.</label>
+                                <input type="radio" id="nocountry" value="nocountry" checked={this.state.q_second === "nocountry"}  onChange={this.myChangeHandler} name="country" />
+                                <label htmlFor="nocountry">나는 3개월 이상 해외에 머무른 적이 없다.</label>
                             </div>
                             <div className="12u$">
                                 <ul className="actions">

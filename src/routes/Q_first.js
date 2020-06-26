@@ -83,17 +83,17 @@ class Q_first extends React.Component {
 			        </header>
                     <form onSubmit={this.mySubmitHandler}>
                         <div className="row 50% uniform">
-                            <div className="6u"><span className="image fit"><img src={pic1} alt="" /></span></div>
-                            <div className="6u$"><span className="image fit"><img src={pic2} alt="" /></span></div>
+                            <div className="6u"><span className="image fit"><label htmlFor="highschool"><img src={pic1} alt="" /></label></span></div>
+                            <div className="6u$"><span className="image fit"><label htmlFor="universe"><img src={pic2} alt="" /></label></span></div>
                         </div>
                         <div className="row uniform 50%">
                             <div className="6u">
-                                <input type="radio" id="priority-normal" value="highschool" checked={this.state.q_first === "highschool"}  onChange={this.myChangeHandler} name="study" />
-                                <label htmlFor="priority-normal">나는 원주와 고등학교 동창이다.</label>
+                                <input type="radio" id="highschool" value="highschool" checked={this.state.q_first === "highschool"}  onChange={this.myChangeHandler} name="study" />
+                                <label htmlFor="highschool">나는 원주와 고등학교 동창이다.</label>
                             </div>
                             <div className="6u$">
-                                <input type="radio" id="priority-high" value="universe" checked={this.state.q_first === "universe"}  onChange={this.myChangeHandler} name="study" />
-                                <label htmlFor="priority-high">나는 원주와 대학교 동창이다.</label>
+                                <input type="radio" id="universe" value="universe" checked={this.state.q_first === "universe"}  onChange={this.myChangeHandler} name="study" />
+                                <label htmlFor="universe">나는 원주와 대학교 동창이다.</label>
                             </div>
                             {/* 
                             <input type="radio" value="universe" checked={this.state.q_first === "universe"}  onChange={this.myChangeHandler} name="study"/> 나는 원주와 대학교 동창이다.
