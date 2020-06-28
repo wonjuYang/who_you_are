@@ -75,7 +75,7 @@ class Q_second extends React.Component {
         const { location } = this.props;
         if(location.state){    
             return (
-                <div className='container'>
+                <div style={{marginTop: "50px"}} className='container App'>
                     <header id="header">
                         <a href="/" className="logo"><strong>WHO ARE YOU</strong></a>
 			        </header>

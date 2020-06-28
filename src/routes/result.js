@@ -62,11 +62,13 @@ class result extends React.Component{
 
     render(){
         return (
-            <section className = "container">
+            <section>
                 <header id="header">
                         <a href="/" className="logo"><strong>WHO ARE YOU</strong></a>
 			    </header>
-                <div> 짠 {this.name}(은) 는 바로 {this.f_result}</div>                 
+                <div style={{marginTop: "50px"}} className="container App">
+                    <div> 짠 {this.name}(은) 는 바로 {this.f_result}</div>
+                </div>      
             </section>
            
         )
