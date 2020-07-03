@@ -10,8 +10,11 @@ import './css/main.css';
 
 
 function App() {
-  return (  
+  return ( 
     <HashRouter>
+        <header id="header">
+          <a href="/" className="logo"><strong>WHO ARE YOU</strong></a>
+			  </header>
         <Route path="/" exact={true} component = { Home } />
         <Route path="/Q_first" component={ Q_first }></Route>
         <Route path="/Q_second" component={ Q_second }></Route>

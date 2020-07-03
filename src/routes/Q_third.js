@@ -78,9 +78,6 @@ class Q_third extends React.Component {
         if(location.state){    
             return (
                 <div style={{marginTop: "50px"}} className='container App'>
-                    <header id="header">
-                        <a href="/" className="logo"><strong>WHO ARE YOU</strong></a>
-			        </header>
                     <form onSubmit={this.mySubmitHandler}>
                         <div className="row 50% uniform">
                         <div className="6u"><span className="image fit"><label htmlFor="with"><img src={pic1} alt="" /></label></span></div>

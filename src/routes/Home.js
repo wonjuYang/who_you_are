@@ -66,9 +66,6 @@ class Home extends React.Component{
     render(){
         return (
             <section className = "container">
-                <header id="header">
-                    <a href="/" className="logo"><strong>WHO ARE YOU</strong></a>
-			    </header>
                 <form onSubmit={this.mySubmitHandler}>
                     <label>
                         Name:
