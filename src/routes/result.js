@@ -97,6 +97,8 @@ class result extends React.Component{
         this.f_result = "nodata";
         this.f_img_result = null;
 
+       
+
         const images_by = [
             pic1,
             pic2,
@@ -233,6 +235,18 @@ class result extends React.Component{
 
     render(){
 
+        const comment_by = [
+            "설명1",
+            "설명2",
+            "설명3",
+            "설명4",
+            "설명5",
+            "설명6",
+            "설명7",
+            "설명8",
+
+        ]
+
         const MyDot = ({ isActive }) => (
             <span
               style={{
@@ -256,6 +270,9 @@ class result extends React.Component{
                         { this.f_img_result.map((img, i) => (
                             <Carousel.Item key={i}>
                             <img alt="" src={img} width="100%" height="500px" />
+                            {comment_by.map((comment, i) => (
+                                <div style={{marginTop: "50px", width:"600px"}}>{comment}</div>
+                            ))}
                             </Carousel.Item>
                     ))}
                     </Carousel>
