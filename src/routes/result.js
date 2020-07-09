@@ -98,7 +98,6 @@ class result extends React.Component{
         this.f_img_result = null;
 
        
-
         const images_by = [
             pic1,
             pic2,
@@ -270,10 +269,10 @@ class result extends React.Component{
                         { this.f_img_result.map((img, i) => (
                             <Carousel.Item key={i}>
                             <img alt="" src={img} width="100%" height="500px" />
-                            {comment_by.map((comment, i) => (
-                                <div style={{marginTop: "50px", width:"600px"}}>{comment}</div>
-                            ))}
                             </Carousel.Item>
+                    ))}
+                    {comment_by.map((comment, i) => (
+                        <div style={{marginTop: "50px", width:"600px"}}>{comment}</div>
                     ))}
                     </Carousel>
                 </div>
