@@ -272,7 +272,7 @@ class result extends React.Component{
                             </Carousel.Item>
                     ))}
                     {comment_by.map((comment, i) => (
-                        <div style={{marginTop: "50px", width:"600px"}}>{comment}</div>
+                        <div key={i} style={{marginTop: "50px", width:"600px"}}>{comment}여기</div>
                     ))}
                     </Carousel>
                 </div>
