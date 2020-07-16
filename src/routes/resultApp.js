@@ -1,5 +1,7 @@
 import React from 'react'
-import Carousel from 'react-grid-carousel';
+import result from '../components/result';
+
+
 import pic1 from '../image/보영/170713.jpg';
 import pic2 from '../image/보영/180723 보영소현.jpg';
 import pic3 from '../image/보영/180811.jpg';
@@ -76,10 +78,32 @@ import pic68 from '../image/한나/191107.jpg';
 
 
 
-class result extends React.Component{
+const initialTodos = new Array(500).fill(0).map(
+    (foo, index) => ({id: index, text: `일정 ${index}`, done: false})
+  )
+
+  const all_by = [
+    {pic: pic1, text: '첫번째 사진 설명' },
+    {pic: pic2, text: '두번째 사진 설명' },
+    {pic: pic3, text: '세번째 사진 설명' },
+    {pic: pic4, text: '네번째 사진 설명' },
+    {pic: pic5, text: '다섯번째 사진 설명' },
+    {pic: pic6, text: '여섯번째 사진 설명' },
+    {pic: pic7, text: '일곱번째 사진 설명' },
+    {pic: pic8, text: '여덞번째 사진 설명' },
+]
+
+
+class resultApp extends React.Component{
 
     
+      
 
+    state = {
+        input: '', //input 값
+        //일정 데이터 초깃값
+        todos: initialTodos,
+    }
 
     constructor(props){
 
@@ -98,17 +122,6 @@ class result extends React.Component{
         this.f_img_result = null;
 
        
-
-        const images_by = [
-            pic1,
-            pic2,
-            pic3,
-            pic4,
-            pic5,
-            pic6,
-            pic7,
-            pic8,
-        ]
 
         const images_sn = [
             pic9,
@@ -189,6 +202,8 @@ class result extends React.Component{
         ]
         
 
+      
+
         
         const q_result = props.location.state;
 
@@ -203,7 +218,7 @@ class result extends React.Component{
             this.f_img_result = images_hn;
         }else if(q_result.q_first === "universe" && q_result.q_second ===  "nocountry" && q_result.q_third === "alone"){
             this.f_result = "보영이지요";
-            this.f_img_result = images_by;
+            this.f_img_result = all_by;
         }else if(q_result.q_first === "universe" && q_result.q_second ===  "yescountry" && q_result.q_third === "with"){
             this.f_result = "사나가 틀림없어 .. ! ";
             this.f_img_result = images_sn;
@@ -235,28 +250,7 @@ class result extends React.Component{
 
     render(){
 
-        const comment_by = [
-            "설명1",
-            "설명2",
-            "설명3",
-            "설명4",
-            "설명5",
-            "설명6",
-            "설명7",
-            "설명8",
 
-        ]
-
-        const MyDot = ({ isActive }) => (
-            <span
-              style={{
-                display: 'inline-block',
-                height: isActive ? '10px' : '8px',
-                width: isActive ? '10px' : '8px',
-                background: '#F8E0E6'
-              }}
-            ></span>
-          )
 
      
         
@@ -264,23 +258,7 @@ class result extends React.Component{
         return (
 
             
-            <section>
-                <div style={{marginTop: "50px", width:"600px"}} className="container App" >
-                    <Carousel showDots={true} dot={MyDot} cols={1} rows={1} gap={10} loop>
-                        { this.f_img_result.map((img, i) => (
-                            <Carousel.Item key={i}>
-                            <img alt="" src={img} width="100%" height="500px" />
-                            {comment_by.map((comment, i) => (
-                                <div style={{marginTop: "50px", width:"600px"}}>{comment}</div>
-                            ))}
-                            </Carousel.Item>
-                    ))}
-                    </Carousel>
-                </div>
-                <div style={{marginTop: "50px"}} className="container App">
-                    <div> 짠 {this.name}(은) 는 바로 {this.f_result}</div>
-                </div>      
-            </section>
+            <result result={this.f_img_result}/>
            
         )
     }
@@ -289,4 +267,4 @@ class result extends React.Component{
 
 }
 
-export default result;
+export default resultApp;
