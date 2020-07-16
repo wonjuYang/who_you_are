@@ -257,10 +257,9 @@ class resultApp extends React.Component{
 
         return (
 
-            
-            <result result={this.f_img_result}/>
+            <result />
            
-        )
+        );
     }
 
 
