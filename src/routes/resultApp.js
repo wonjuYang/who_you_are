@@ -94,6 +94,89 @@ const initialTodos = new Array(500).fill(0).map(
 ]
 
 
+const all_sn = [
+    {pic: pic9, text: '첫번째 사진 설명' },
+    {pic: pic10, text: '두번째 사진 설명' },
+    {pic: pic11, text: '세번째 사진 설명' },
+    {pic: pic12, text: '네번째 사진 설명' },
+    {pic: pic13, text: '다섯번째 사진 설명' },
+    {pic: pic14, text: '여섯번째 사진 설명' },
+    {pic: pic15, text: '일곱번째 사진 설명' },
+    {pic: pic16, text: '여덞번째 사진 설명' },
+    {pic: pic17, text: '여덞번째 사진 설명' },
+    {pic: pic18, text: '여덞번째 사진 설명' },
+]
+
+
+const all_sh = [
+    {pic: pic19, text: '첫번째 사진 설명' },
+    {pic: pic20, text: '두번째 사진 설명' },
+    {pic: pic21, text: '세번째 사진 설명' },
+    {pic: pic22, text: '네번째 사진 설명' },
+    {pic: pic23, text: '다섯번째 사진 설명' },
+    {pic: pic24, text: '여섯번째 사진 설명' },
+    {pic: pic25, text: '일곱번째 사진 설명' },
+    {pic: pic26, text: '여덞번째 사진 설명' },
+    {pic: pic27, text: '여덞번째 사진 설명' },
+    {pic: pic28, text: '여덞번째 사진 설명' },
+]
+
+const all_yh = [
+
+    {pic: pic31, text: '세번째 사진 설명' },
+    {pic: pic32, text: '네번째 사진 설명' },
+    {pic: pic33, text: '다섯번째 사진 설명' },
+    {pic: pic34, text: '여섯번째 사진 설명' },
+    {pic: pic35, text: '일곱번째 사진 설명' },
+    {pic: pic36, text: '여덞번째 사진 설명' },
+    {pic: pic37, text: '여덞번째 사진 설명' },
+    {pic: pic38, text: '여덞번째 사진 설명' },
+    {pic: pic39, text: '여덞번째 사진 설명' },
+    {pic: pic40, text: '여덞번째 사진 설명' },
+    {pic: pic41, text: '여덞번째 사진 설명' },
+    {pic: pic42, text: '여덞번째 사진 설명' },
+    {pic: pic43, text: '여덞번째 사진 설명' },
+    {pic: pic44, text: '여덞번째 사진 설명' },
+    
+]
+
+const all_js = [
+
+    {pic: pic45, text: '세번째 사진 설명' },
+    {pic: pic46, text: '네번째 사진 설명' },
+    {pic: pic47, text: '다섯번째 사진 설명' },
+    {pic: pic48, text: '여섯번째 사진 설명' },
+    {pic: pic49, text: '일곱번째 사진 설명' },
+    {pic: pic50, text: '여덞번째 사진 설명' },
+    {pic: pic51, text: '여덞번째 사진 설명' },
+    {pic: pic52, text: '여덞번째 사진 설명' },
+    
+]
+
+const all_hn = [
+
+    {pic: pic53, text: '세번째 사진 설명' },
+    {pic: pic54, text: '네번째 사진 설명' },
+    {pic: pic55, text: '다섯번째 사진 설명' },
+    {pic: pic56, text: '여섯번째 사진 설명' },
+    {pic: pic57, text: '일곱번째 사진 설명' },
+    {pic: pic58, text: '여덞번째 사진 설명' },
+    {pic: pic59, text: '여덞번째 사진 설명' },
+    {pic: pic60, text: '여덞번째 사진 설명' },
+    {pic: pic61, text: '여덞번째 사진 설명' },
+    {pic: pic62, text: '여덞번째 사진 설명' },
+    {pic: pic63, text: '여덞번째 사진 설명' },
+    {pic: pic64, text: '여덞번째 사진 설명' },
+    {pic: pic65, text: '여덞번째 사진 설명' },
+    {pic: pic66, text: '여덞번째 사진 설명' },
+    {pic: pic67, text: '여덞번째 사진 설명' },
+    {pic: pic68, text: '여덞번째 사진 설명' },
+    
+]
+
+
+
+
 class resultApp extends React.Component{
 
     
@@ -121,89 +204,6 @@ class resultApp extends React.Component{
         this.f_result = "nodata";
         this.f_img_result = null;
 
-       
-
-        const images_sn = [
-            pic9,
-            pic10,
-            pic11,
-            pic12,
-            pic13,
-            pic14,
-            pic15,
-            pic16,
-            pic17,
-            pic18,
-           
-        ]
-
-        const images_sh = [
-            pic19,
-            pic20,
-            pic21,
-            pic22,
-            pic23,
-            pic24,
-            pic25,
-            pic26,
-            pic27,
-            pic28,
-
-        ]
-
-        const images_yh = [
-            pic31,
-            pic32,
-            pic33,
-            pic34,
-            pic35,
-            pic36,
-            pic37,
-            pic38,
-            pic39,
-            pic40,
-            pic41,
-            pic42,
-            pic43,
-            pic44,
-
-        ]
-
-        const images_js = [
-            pic45,
-            pic46,
-            pic47,
-            pic48,
-            pic49,
-            pic50,
-            pic51,
-            pic52,
-
-        ]
-
-        const images_hn = [
-            pic53,
-            pic54,
-            pic55,
-            pic56,
-            pic57,
-            pic58,
-            pic59,
-            pic60,
-            pic61,
-            pic62,
-            pic63,
-            pic64,
-            pic65,
-            pic66,
-            pic67,
-            pic68,
-
-        ]
-        
-
-      
-
         
         const q_result = props.location.state;
 
@@ -212,22 +212,22 @@ class resultApp extends React.Component{
 
         if(q_result.q_first === "highschool" && q_result.q_second ===  "yescountry" && q_result.q_third === "with"){
             this.f_result = "랑랑이야ㅠ 행복하자ㅠ";
-            this.f_img_result = images_yh;
+            this.f_img_result = all_yh;
         }else if(q_result.q_first === "highschool" && q_result.q_second ===  "nocountry" && q_result.q_third === "alone"){
             this.f_result = "내 칭구 항나륑~!";
-            this.f_img_result = images_hn;
+            this.f_img_result = all_hn;
         }else if(q_result.q_first === "universe" && q_result.q_second ===  "nocountry" && q_result.q_third === "alone"){
             this.f_result = "보영이지요";
             this.f_img_result = all_by;
         }else if(q_result.q_first === "universe" && q_result.q_second ===  "yescountry" && q_result.q_third === "with"){
             this.f_result = "사나가 틀림없어 .. ! ";
-            this.f_img_result = images_sn;
+            this.f_img_result = all_sn;
         }else if(q_result.q_first === "universe" && q_result.q_second ===  "nocountry" && q_result.q_third === "with"){
             this.f_result = "소링 ~";
-            this.f_img_result = images_js;
+            this.f_img_result = all_js;
         }else if(q_result.q_first === "universe" && q_result.q_second ===  "yescountry" && q_result.q_third === "alone"){
             this.f_result = "고앵 애옹 소현";
-            this.f_img_result = images_sh;
+            this.f_img_result = all_sh;
         }else{
             this.f_result="누군데 이거 하고 있는건데?? 내 친구 맞아?? 다시 해"
         }
