@@ -1,5 +1,5 @@
 import React from 'react'
-import result from '../components/result';
+import Result from '../components/result';
 
 
 import pic1 from '../image/보영/170713.jpg';
@@ -256,8 +256,8 @@ class resultApp extends React.Component{
         
 
         return (
-
-            <result />
+            //f_result, f_result_name, name
+            <Result f_result={this.f_img_result} f_result_name = {this.f_result} name={this.name} />
            
         );
     }
