@@ -21,14 +21,14 @@ class Home extends React.Component{
     renderSubmitBtn = () => {
         if (this.isEveryFieldValid()) {
           return (
-            <button type="submit" className="btn btn-primary btn-block">
+            <button type="submit" className="btn special btn-block">
               Submit
             </button>
           )
         } 
       
         return (
-          <button type="submit" className="btn btn-primary btn-block" disabled>
+          <button type="submit" className="btn special btn-block" disabled>
             Submit
           </button>
         )
@@ -71,7 +71,15 @@ class Home extends React.Component{
                         Name:
                         <input type="text" onChange={this.myChangeHandler} name="name" />
                     </label>
-                    {this.renderSubmitBtn()}
+                    <div className="row uniform 50% App">
+                        <div className="12u$">
+                            <ul className="actions">
+                                <li>
+                                    {this.renderSubmitBtn()}
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
 
                 </form>
                 {/*<span>{this.state.username}</span>*/}

@@ -28,14 +28,14 @@ class Q_second extends React.Component {
     renderSubmitBtn = () => {
         if (this.isEveryFieldValid()) {
           return (
-            <button type="submit" className="btn btn-primary btn-block">
+            <button type="submit" className="btn special btn-block">
               Submit
             </button>
           )
         } 
       
         return (
-          <button type="submit" className="btn btn-primary btn-block" disabled>
+          <button type="submit" className="btn special btn-block" disabled>
             Submit
           </button>
         )
@@ -78,7 +78,7 @@ class Q_second extends React.Component {
                 <div style={{marginTop: "50px"}} className='container App'>
                     <form onSubmit={this.mySubmitHandler}>
                         <div className="row 50% uniform">
-                        <div className="6u"><span className="image fit"><label htmlFor="yescountry"><img src={pic1} alt="" /></label></span></div>
+                            <div className="6u"><span className="image fit"><label htmlFor="yescountry"><img src={pic1} alt="" /></label></span></div>
                             <div className="6u$"><span className="image fit"><label htmlFor="nocountry"><img src={pic2} alt="" /></label></span></div>
                         </div>
                         <div className="row uniform 50%">

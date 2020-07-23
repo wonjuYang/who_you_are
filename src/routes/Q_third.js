@@ -80,7 +80,7 @@ class Q_third extends React.Component {
                 <div style={{marginTop: "50px"}} className='container App'>
                     <form onSubmit={this.mySubmitHandler}>
                         <div className="row 50% uniform">
-                        <div className="6u"><span className="image fit"><label htmlFor="with"><img src={pic1} alt="" /></label></span></div>
+                            <div className="6u"><span className="image fit" ><label htmlFor="with"><img src={pic1} alt="" /></label></span></div>
                             <div className="6u$"><span className="image fit"><label htmlFor="alone"><img src={pic2} alt="" /></label></span></div>
                         </div>
                         <div className="row uniform 50%">
